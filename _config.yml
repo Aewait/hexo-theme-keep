@@ -273,3 +273,21 @@ footer:
   since: 2020  # the starting year of your website. Can be null
   icp:         # ICP record number of your website. Can be null
   upyun:       # If your site is deployed on upyun, your can fill the upyun url. Can be null
+
+# 网站运行时间，格式形如：“本站已安全运行 101 天 12 小时 13 分 41 秒”
+# Runing Time
+running_time:
+  enable: true # Option values: true | false
+  create_time: '01/01/2021 00:00:00' #此处修改你的建站时间或者网站上线时间
+
+# Add shields.io in footer
+shields:
+  enable: true # Option values: true | false
+  data:
+    hexo: #this is an example
+      link: https://github.com/XPoet/hexo-theme-keep #link for click
+      img: https://img.shields.io/badge/hexo-keep%20v3.5.2-blue #img url
+    # add your own
+    example:
+      link: #link for click
+      img: #img url
