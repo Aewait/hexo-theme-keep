@@ -6,6 +6,7 @@ $friend-link-item-border-radius = 6px
 .page-template-container {
 
   keep-container(false, 0, 0, 2rem, 2rem)
+  //background: rgba(255,255,255,0.9)
 
   .page-template-content {
     color var(--text-color-3)
@@ -154,4 +155,12 @@ $friend-link-item-border-radius = 6px
       }
     }
   }
+}
+
+/* 使文章背景框能够更具明暗模式自动切换颜色*/
+.light-mode .page-template-container {
+    background-color: rgba(255, 255, 255, 0.9)
+}
+.dark-mode .page-template-container {
+    background-color: rgba(30, 30, 30, 0.9)
 }

@@ -11,7 +11,7 @@ $logo-image-box-width = 46px
   width 100%
   height 100%
   padding-top $scroll-progress-bar-height
-  background var(--background-color-1)
+  /*background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4));*/
 
   hover-style(false, 0, 0)
 
@@ -116,6 +116,7 @@ $logo-image-box-width = 46px
             margin-left 2rem
             color var(--text-color-3)
             font-size 1rem
+            font-weight: bold /*标题栏字体加粗*/
             cursor pointer
 
             &:first-child {
@@ -303,3 +304,4 @@ $logo-image-box-width = 46px
 .header-drawer-show {
   overflow hidden
 }
+

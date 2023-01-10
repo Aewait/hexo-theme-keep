@@ -1,0 +1,40 @@
+.dark-mode{
+    --content-background-color:#37383fe6;
+    --text-color-4:	#d6d6d6; //黑夜模式底部字体颜色
+}
+.light-mode{
+    --content-background-color:#ffffffe6;
+    --text-color-4: #454545; //白天模式底部字体颜色
+}
+
+// 评论框大小
+.post-toc-wrap .post-toc .nav{
+  padding:21px
+}
+
+// 使文章toc能够更具明暗模式自动切换颜色
+.light-mode .post-toc-wrap {
+    background-color: #ffffffe6;
+}
+.dark-mode .post-toc-wrap {
+    background-color: #37383fe6;
+}
+
+
+// 顶部背景透明度渐变，明暗变化
+.light-mode .header-wrapper {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4));
+}
+.dark-mode .header-wrapper {
+    background: linear-gradient(to bottom, rgba(30, 30, 30, 1), rgba(30, 30, 30, 0.4));
+}
+
+// 底部背景透明度渐变，明暗变化
+.light-mode .page-main-content-bottom {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4))/*透明度设置*/
+  padding-top: 12px;/*底部长度*/
+}
+.dark-mode .page-main-content-bottom {
+  background: linear-gradient(to top, rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.4));
+  padding-top: 12px;/*底部长度*/
+}

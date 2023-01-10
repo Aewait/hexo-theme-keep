@@ -35,14 +35,20 @@ $first-screen-font-color = $temp-font-color ? convert($temp-font-color) : var(--
     padding-top 2rem
 
     .description {
-      color $first-screen-font-color
+      /*color $first-screen-font-color*/
+      color: rgb(255 250 250) /*字体颜色*/
       font-weight bold
       font-size $first-screen-font-size
       line-height 1.8
       text-align center
 
+      background: rgba(50,50,50,0.3); /*字体背景颜色和透明的*/
+      padding: 3px 15px; /*字体背景框的大小*/
+      border-radius: 5px; /*圆角*/      
+
       .desc-item {
-        color $first-screen-font-color
+        /*color $first-screen-font-color*/
+        color: rgb(255 250 250) /*字体颜色*/
       }
 
       +keep-tablet() {
@@ -52,6 +58,10 @@ $first-screen-font-color = $temp-font-color ? convert($temp-font-color) : var(--
 
 
     .s-icon-list {
+      background: rgba(220 220 220,0.3); /*字体背景颜色和透明的*/
+      padding:4px 11px 4px 11px; /*字体背景框的大小*/
+      border-radius: 5px; /*圆角*/
+
       position absolute
       bottom 0
       display flex

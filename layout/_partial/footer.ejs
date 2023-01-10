@@ -29,9 +29,10 @@ const { site_uv: bsz_site_uv, site_pv: bsz_site_pv, enable: bsz_enable } = theme
                 <% } %>
             </div>
         <% } %>
-        <div class="theme-info info-item">
+        <!--注释掉这里的代码，就可以取消底部的hexo标识-->
+        <!-- <div class="theme-info info-item">
             <%- __('powered_by', '<a target="_blank" href="https://hexo.io">Hexo</a>') %>&nbsp;|&nbsp;<%- __('theme') %>&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.5.2</a>
-        </div>
+        </div> -->
         <% if (f_icp) { %>
             <div class="icp-info info-item">
                 <a target="_blank" rel="nofollow"
@@ -46,6 +47,53 @@ const { site_uv: bsz_site_uv, site_pv: bsz_site_pv, enable: bsz_enable } = theme
                 <a target="_blank" rel="nofollow" href="<%= f_upyun %>">
                     <%- __('footer_upyun', '<img src="/images/upyun.png" height="20">') %>
                 </a>
+            </div>
+        <% } %>    
+        <!-- 添加网站运行时间 -->
+        <% if (theme.running_time && theme.running_time.enable && theme.running_time.create_time) { %>
+            <div class="timerun-info info-item">
+                <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+                <script>
+                var now = new Date();
+                function createtime() {
+                    //此处修改你的建站时间或者网站上线时间
+                    var create_time = '<%- theme.running_time.create_time %>';
+                    var grt = new Date(create_time);
+                    now.setTime(now.getTime() + 250);
+                    days = (now - grt) / 1000 / 60 / 60 / 24;
+                    dnum = Math.floor(days);
+                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+                    hnum = Math.floor(hours);
+                    if (String(hnum).length == 1) {
+                        hnum = "0" + hnum;
+                    }
+                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+                    mnum = Math.floor(minutes);
+                    if (String(mnum).length == 1) {
+                        mnum = "0" + mnum;
+                    }
+                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                    snum = Math.round(seconds);
+                    if (String(snum).length == 1) {
+                        snum = "0" + snum;
+                    }
+                    document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+                    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+                }
+                setInterval("createtime()", 250);
+                </script>
+            </div>
+        <% } %>
+        <!-- 添加底部的shields io图片 -->
+        <% if (theme.shields && theme.shields.enable) { %>
+            <div class="shields-info info-item">
+                <% for (var i in theme.shields.data){ %>
+                    <% if (theme.shields.data[i].img) { %>
+                        <a href="<%= theme.shields.data[i].link%>" target="_blank">
+                            <img src="<%= theme.shields.data[i].img%>" height="20px">
+                        </a>
+                    <% } %>
+                <% } %>
             </div>
         <% } %>
     </div>

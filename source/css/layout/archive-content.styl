@@ -1,5 +1,12 @@
 .archive-container {
   keep-container(false, 0, 0, 2rem, 2rem)
+  //background: rgba(255,255,255,0.9);
 }
 
-
+/* 使文章背景框能够更具明暗模式自动切换颜色*/
+.light-mode .archive-container {
+    background-color: rgba(255, 255, 255, 0.9)
+}
+.dark-mode .archive-container {
+    background-color: rgba(30, 30, 30, 0.9)
+}

@@ -5,6 +5,18 @@
   height auto
   background var(--background-color-1)
 
+  transition-t("padding-left", "0", "0.3", "ease-out");
+  /*首页背景图片路径*/
+  background: url("https://img-7758-typora.oss-cn-shanghai.aliyuncs.com/hexo/MainBG.jpg");
+  /*背景图片不重复多次显示*/
+  background-repeat: no-repeat;
+  /*窗口放缩时背景图片中心始终在屏幕中心*/
+  background-position: center;
+  /*背景图片固定，不滚动*/
+  background-attachment: fixed;
+  /*图片大小自适应窗口大小*/
+  background-size: cover ;
+
   +keep-tablet() {
     padding-left 0 !important
   }
@@ -13,7 +25,18 @@
   .page-main-content {
     position relative
     box-sizing border-box
-    padding-top $header-height
+    padding-top $header-height    
+
+    /*其余页面背景图片路径*/
+    background: url("https://img-7758-typora.oss-cn-shanghai.aliyuncs.com/hexo/mothra.png");
+    /*背景图片不重复多次显示*/
+    background-repeat: no-repeat;
+    /*窗口放缩时背景图片中心始终在屏幕中心*/
+    background-position: center;
+    /*背景图片固定，不滚动*/
+    background-attachment: fixed;
+    /*图片大小自适应窗口大小*/
+    background-size: cover ;
 
     &.is-home {
       .transparent-1 {

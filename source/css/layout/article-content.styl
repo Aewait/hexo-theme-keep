@@ -42,6 +42,7 @@ $toc-container-width = 15rem
     width 100%
     height 100%
     keep-container(false, 0, 0, 2rem, 2rem)
+    /*background: rgba(255,255,255,0.9); */ /*文章背景透明度*/
 
     +keep-mobile() {
       padding 1.2rem 0.2rem
@@ -276,5 +277,13 @@ $toc-container-width = 15rem
       top $header-shrink-height + $component-spacing-value
       max-height 'calc(100vh - %s)' % ($header-shrink-height + $component-spacing-value)
     }
+  }
+
+  /* 使文章背景框能够更具明暗模式自动切换颜色*/
+  .light-mode .article-content-container {
+      background: rgba(255, 255, 255, 0.9)
+  }
+  .dark-mode .article-content-container {
+      background: rgba(30, 30, 30, 0.9)
   }
 }
