@@ -59,6 +59,9 @@ style:
     # First screen background image (You can use local image or image external link)
     background_img: /images/bg.svg
 
+    # Post screen background image (You can use local image or image external link)
+    background_post_img: /images/bg.svg
+
     # First screen description
     # You can use the "||" to begin a newline, maximum is two lines.
     description: Keep writing and Keep loving.

@@ -1,3 +1,10 @@
+// 首页背景图片路径
+$temp-img1 = hexo-config('style.first_screen.background_img')
+$first-screen-img1 = $temp-img1 ? $temp-img1 : '/images/bg.svg'
+// 其余页面背景图片路径
+$temp-img2 = hexo-config('style.first_screen.background_post_img')
+$first-screen-img2 = $temp-img2 ? $temp-img2 : '/images/bg.svg'
+
 .page-container {
   position relative
   box-sizing border-box
@@ -7,7 +14,7 @@
 
   transition-t("padding-left", "0", "0.3", "ease-out");
   /*首页背景图片路径*/
-  background: url("https://img-7758-typora.oss-cn-shanghai.aliyuncs.com/hexo/MainBG.jpg");
+  background: url($first-screen-img1);
   /*背景图片不重复多次显示*/
   background-repeat: no-repeat;
   /*窗口放缩时背景图片中心始终在屏幕中心*/
@@ -28,7 +35,7 @@
     padding-top $header-height    
 
     /*其余页面背景图片路径*/
-    background: url("https://img-7758-typora.oss-cn-shanghai.aliyuncs.com/hexo/mothra.png");
+    background: url($first-screen-img2);
     /*背景图片不重复多次显示*/
     background-repeat: no-repeat;
     /*窗口放缩时背景图片中心始终在屏幕中心*/
