@@ -1,8 +1,8 @@
 <div align="right">
   語言:
-  繁中
-  <a title="English" href="../README.md">English</a>
-  <a title="Chinese" href="README_zh-CN.md">简中</a>
+  繁體中文 | 
+  <a title="English" href="../README.md">English</a> | 
+  <a title="Chinese" href="README_zh-CN.md">简体中文</a>
 </div>
 
 <a href="https://xpoet.cn"><img align="center" alt="Keep" src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/hexo-theme-keep/keep-logo-slogan.svg"></a>
@@ -67,7 +67,7 @@ theme: keep
 ```sh
 # 推薦
 $ cd hexo-site
-$ npm update hexo-theme-keep
+$ npm install hexo-theme-keep@latest
 ```
 
 或者透過 git 更新到最新的 master 分支：
@@ -103,4 +103,6 @@ $ git pull
 
 ## :memo: 許可
 
-[GPL-3.0](https://github.com/XPoet/hexo-theme-keep/blob/master/LICENSE) Copyright © 2020-present XPoet
+[AGPL-3.0](https://github.com/XPoet/hexo-theme-keep/blob/master/LICENSE)  
+
+Copyright © 2020-present XPoet
